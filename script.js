@@ -1,6 +1,10 @@
 let personal = true;
 let pButton = document.getElementById("personal");
 let ipButton = document.getElementById("professional");
+let colWidth = (document.body.clientWidth-(16*7))/6;
+var r = document.querySelector(':root');
+r.style.setProperty('--column-width', colWidth+'px');
+
 function personalToggle (){
     if (personal) {
         //document.body.style="font-family:Josef Rounded";
@@ -23,6 +27,11 @@ function personalToggle (){
 
         personal=!personal;
     }
+}
+
+function windowResized(){
+    colWidth = (document.body.clientWidth-(16*7))/6;
+    r.style.setProperty('--column-width', colWidth+'px');
 }
 
 //personalToggle ();
