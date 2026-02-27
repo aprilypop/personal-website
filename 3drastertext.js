@@ -41,8 +41,8 @@ let txtInput,
 		exportText;
 
 function preload() {
-  font = loadFont('https://cdn.prod.website-files.com/6727c03b0e43326a1f949b07/67acc93411ca64d547b6bfa9_SHIFTSans-Heavy-Nov17.otf'); // Preload the font. For 3D to work, we need a font file (not a linked font). 
-	console.log(font);
+    font = loadFont('SHIFTSans-Heavy-Nov17.otf'); // Preload the font. For 3D to work, we need a font file (not a linked font).
+    font2 = loadFont('JosefRounded-Faux-Regular 22-04-2025_freeze.ttf'); // Preload the font. For 3D to work, we need a font file (not a linked font). 
 }
 
 
@@ -152,6 +152,12 @@ function draw() {
 	button2.mousePressed(()=>{
 		saveCanvas('shiftCanvas', 'png');
 	});
+    push();
+    rectMode(CENTER);
+    textAlign(CENTER);
+    textFont(font2);
+    text('Click Me', width/2, height-20);
+    pop();
 
 }
 
