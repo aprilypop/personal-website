@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Josef Rounded';
+    src: url('JosefRounded-Faux-Regular 22-04-2025_freeze.woff2');
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: 'Josef Rounded';
+    font-size: 13.5px;
+    color: black;
+    line-height: 1rem;
+    background-color: #f5f5f5;;
+}
+.overlay {
+    display:block;
+    position:fixed;
+    height:100%;
+}
+.side-bar {
+    width: 300px;
+    margin: 1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%;
+}
+p {
+    display: block;
+    margin-block-start: 1rem;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+a {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 12%; /* 1.44px */
+    text-underline-offset: 12.5%; /* 1.5px */
+    text-underline-position: from-font;
+    color:black;
+}
+a:hover {
+    text-decoration:none;
+}
+header {
+    margin: 1rem;
+}
+.header-nav>a {
+    text-decoration: none;
+    opacity: 30%;
+}
+.header-nav>a:hover {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 12%; /* 1.44px */
+    text-underline-offset: 12.5%; /* 1.5px */
+    text-underline-position: from-font;
+    opacity: 100%;
+}
+.header-nav>a:active {
+    opacity: 100%;
+}
+.contact{
+    margin-top:1rem;
+    display:block;
+}
+.contact>a{
+    display:block;
+}
+#personal, #blog {
+    opacity: 30%;
+    text-decoration: none;
+    cursor: no-drop;
+}
+#home {
+    opacity:100%;
+}
+
+.nav-wrap>span {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 12%; /* 1.44px */
+    text-underline-offset: 12.5%; /* 1.5px */
+    text-underline-position: from-font;
+}
+nav>a {
+    text-decoration: none;
+    display:block;
+    margin-top:1rem;
+    opacity:30%;
+}
+nav>a+a {
+    margin-top:0;
+}
+nav>a:hover {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 12%; /* 1.44px */
+    text-underline-offset: 12.5%; /* 1.5px */
+    text-underline-position: from-font;
+    opacity:100%;
+}
