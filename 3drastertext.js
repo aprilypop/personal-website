@@ -185,10 +185,14 @@ function keyPressed() {
 	}, 10);
 }
 
-function mousePressed() {
+function rotateRandom() {
     tfw = Math.random()*-20-40;
     tfh = Math.random()*-20-40;
     rot2 = Math.random()*30-15;
     nameCode.style='transform: translate('+tfw+'%,'+tfh+'%) rotate('+rot2+'deg)';
     mySelect.selected(random(['#FF4500','#FF4500','#51DA4C','#00E8FC','#1F41FF','#FF36AD']));
 }
+
+nameCode.addEventListener("click", function() {
+    rotateRandom();
+});

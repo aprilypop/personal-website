@@ -35,3 +35,16 @@ function windowResized(){
 }
 
 //personalToggle ();
+
+// function to let hover image follow mouse
+var mouseX;
+var mouseY;
+$(document).mousemove( function(e) {
+    mouseX = e.pageX; 
+    mouseY = e.pageY;
+    $('.hide').css({'top':(mouseY-200),'left':mouseX});
+});  
+/*
+$(".classForHoverEffect").mouseover(function(){
+  $('#DivToShow').css({'top':mouseY,'left':mouseX}).fadeIn('slow');
+});*/

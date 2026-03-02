@@ -140,7 +140,7 @@ nav>a {
     margin-top:1rem;
     opacity:30%;
 }
-nav>a+a {
+nav>a~a {
     margin-top:0;
 }
 nav>a:hover {
@@ -153,7 +153,8 @@ nav>a:hover {
     opacity:100%;
 }
 
-#bg-feature {
+#bg-feature, canvas {
+    display:block;
     width:60%;
     height:60%;
     left: 50%;
@@ -161,7 +162,9 @@ nav>a:hover {
     transform: translate(-50%, -50%);
     position:fixed;
     display:flex;
-    
+    cursor: pointer;
+    mix-blend-mode: multiply;
+    z-index:-1;
 }
 
 .left-bar{
@@ -171,4 +174,15 @@ nav>a:hover {
 }
 .right-bar {
     float:right
+}
+
+.hide {
+    display:none;
+    height:25%;
+    position:fixed;
+    z-index:1;
+    pointer-events: none;
+}
+.project-link:hover + .hide {
+  display: block;
 }
