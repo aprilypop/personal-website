@@ -3,7 +3,28 @@ let pButton = document.getElementById("personal");
 let ipButton = document.getElementById("professional");
 let colWidth = (document.body.clientWidth-(16*7))/6;
 var r = document.querySelector(':root');
+let colourHL = $(".colour-hl");
+let siteColour = ['#FF4500','#FFC300','#51DA4C','#00E8FC','#1F41FF','#FF36AD'];
+
 r.style.setProperty('--column-width', colWidth+'px');
+
+/*
+function setTextStrokeRandom () {
+    let i = Math.floor(Math.random() * siteColour.length);
+    r.style.setProperty('--colour-hl', siteColour[i]);
+    if (i==0 || i==4 || i==5) {
+        r.style.setProperty('--colour-text', '#f5f5f5');
+    } else {
+        r.style.setProperty('--colour-text', '#black');
+    }
+}
+
+colourHL.hover(function() {
+  setTextStrokeRandom();
+}, function() {
+  //mouse off the item
+});
+*/
 
 function personalToggle (){
     if (personal) {
@@ -37,14 +58,17 @@ function windowResized(){
 //personalToggle ();
 
 // function to let hover image follow mouse
-var mouseX;
-var mouseY;
+let mouseX2;
+let mouseY2;
+let imgHeightDig;
+
 $(document).mousemove( function(e) {
-    mouseX = e.pageX; 
-    mouseY = e.pageY;
-    $('.hide').css({'top':(mouseY-200),'left':mouseX});
+    mouseX2 = e.pageX; 
+    mouseY2 = e.pageY;
+    $('.hide').css({'top':(mouseY2-imgHeightDig),'left':mouseX2});
 });  
-/*
-$(".classForHoverEffect").mouseover(function(){
-  $('#DivToShow').css({'top':mouseY,'left':mouseX}).fadeIn('slow');
-});*/
+$('.project-link').hover(function() {
+    imgHeightDig = this.nextElementSibling.height;
+}, function() {
+  //mouse off the item
+});

@@ -72,7 +72,7 @@ function setup() {
   mySelect.position(375, 25);
 
   mySelect.option('red', '#FF4500');
-  mySelect.option('orange', '#FF4500');
+  mySelect.option('orange', '#FFC300');
   mySelect.option('yellow', '#FFF200');
   mySelect.option('green', '#51DA4C');
   mySelect.option('cyan', '#00E8FC');
@@ -80,7 +80,7 @@ function setup() {
   mySelect.option('magenta', '#FF36AD');
   mySelect.option('none');
 	
-	mySelect.selected(random(['#FF4500','#FF4500','#51DA4C','#00E8FC','#1F41FF','#FF36AD']));
+	mySelect.selected(random(siteColour));
 
 	button = createButton('randomize!');
 	button.position(475,25);
@@ -190,7 +190,7 @@ function rotateRandom() {
     tfh = Math.random()*-20-40;
     rot2 = Math.random()*30-15;
     nameCode.style='transform: translate('+tfw+'%,'+tfh+'%) rotate('+rot2+'deg)';
-    mySelect.selected(random(['#FF4500','#FF4500','#51DA4C','#00E8FC','#1F41FF','#FF36AD']));
+    mySelect.selected(random(siteColour));
 }
 
 nameCode.addEventListener("click", function() {
