@@ -152,12 +152,13 @@ function draw() {
 	button2.mousePressed(()=>{
 		saveCanvas('shiftCanvas', 'png');
 	});
-    push();
+
+    /*push();
     rectMode(CENTER);
     textAlign(CENTER);
     textFont(font2);
     text('Click Me', width/2, height-20);
-    pop();
+    pop();*/
 
 }
 
