@@ -1,0 +1,47 @@
+<div class="nav-wrap">
+    <span class="title">Clients</span>
+    <br>
+    <nav>
+        <a href="/trelli/index.html" class="hl1">Trelli</a>
+        <img class="hide" src="/homepagehover/hover-trelli.jpg" />
+        <a href="https://meat.studio/work/newworld" target="_blank" class="hl1" id="nw">NewWorld</a>
+        <img class="hide" src="/homepagehover/hover-nw.jpg" />
+        <a href="https://meat.studio/work/juztlab" target="_blank" class="hl1">Juztlab</a>
+        <img class="hide" src="/homepagehover/hover-jzt.jpg" />
+        <a href="#" class="hl1">Mid-Day Squares</a>
+        <img class="hide" src="/homepagehover/hover-mds.png" />
+        <a href="#" class="hl1">Reel Asian</a>
+        <img class="hide vertical" src="/homepagehover/hover-ra29.gif" />
+        <a href="#" class="hl1">Brooklyn Nets</a>
+        <a href="#" class="hl1">Himalaya Energy</a>
+        <img class="hide" src="/homepagehover/hover-him.jpg" />
+        <a href="#" class="hl1">Pluck</a>
+        <img class="hide" src="/homepagehover/hover-pluck.jpg" />
+        <a href="#" class="hl1">Art Metropole / Temporary Acts</a>
+        <img class="hide" src="/homepagehover/hover-artmet.jpg" />
+        <a href="#" class="hl1">YorkU DESN 2023 Promo Campaign</a>
+        <img class="hide vertical" src="/homepagehover/hover-desn.jpg" />
+        <a href="#" class="hl1">Oll</a>
+        <a href="#" class="hl1">Mechrevo</a>
+    </nav>
+    <br>
+    <span class="title">Personal Works</span>
+    <nav>
+        <a href="#" class="hl1">Draft / Craft</a>
+        <img class="hide" src="/homepagehover/hover-draft.gif" />
+        <a href="#" class="hl1">Bungled and Botched</a>
+        <a href="#" class="hl1">The Most Beautiful Toronto Books Festival</a>
+        <a href="#" class="hl1">Josef Rounded</a>
+        <a href="#" class="hl1">SHIFT Sans</a>
+    </nav>
+</div>
+<script>
+    $('a').hover(function() {
+        imgHeightDig = this.nextElementSibling.height;
+    }, function() {
+    //mouse off the item
+    });
+
+    let tempObj = $("a[href='" + location.pathname + "']");
+    tempObj.addClass("current-page");
+</script>

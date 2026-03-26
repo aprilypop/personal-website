@@ -63,12 +63,17 @@ let mouseY2;
 let imgHeightDig;
 
 $(document).mousemove( function(e) {
-    mouseX2 = e.pageX; 
-    mouseY2 = e.pageY;
-    $('.hide').css({'top':(mouseY2-imgHeightDig),'left':mouseX2});
+    scrollOffset = $(document).scrollTop()
+    mouseX2 = e.clientX;
+    mouseY2 = e.clientY-imgHeightDig < 0 ? e.clientY : e.clientY-imgHeightDig;
+    $('.hide').css({'top':(mouseY2),'left':mouseX2});
 });  
-$('.project-link').hover(function() {
-    imgHeightDig = this.nextElementSibling.height;
-}, function() {
-  //mouse off the item
+
+$('#navbarstuffs').load('/navbarstuffs.html');
+$('.award').load('/awards.html');
+$('.contact').load('/contact.html');
+$(document).ready(function(){
+    //alert("a[href*='" + location.pathname + "']");
+    let tempObj = $("a[href='" + location.pathname + "']");
+    tempObj.addClass("current-page");
 });
