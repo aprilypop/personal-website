@@ -10,29 +10,29 @@
         <video id="jztvideo" class="hide" autoplay muted loop><source src="/homepagehover/hover-jzt.mp4" type="video/mp4"></video>
         <a href="/mds/" class="hl1">Mid-Day Squares</a>
         <img class="hide" src="/homepagehover/hover-mds.png" />
-        <a href="" class="hl1 link-empty">Reel Asian</a>
+        <a href="" class="hl1">Reel Asian</a>
         <img class="hide vertical" src="/homepagehover/hover-ra29.gif" />
-        <a href="" class="hl1 link-empty">Brooklyn Nets</a>
-        <a href="" class="hl1 link-empty">Himalaya Energy</a>
+        <a href="" class="hl1">Brooklyn Nets</a>
+        <a href="" class="hl1">Himalaya Energy</a>
         <img class="hide" src="/homepagehover/hover-him.jpg" />
-        <a href="" class="hl1 link-empty">Pluck</a>
+        <a href="" class="hl1">Pluck</a>
         <img class="hide" src="/homepagehover/hover-pluck.jpg" />
-        <a href="" class="hl1 link-empty">Art Metropole / Temporary Acts</a>
+        <a href="" class="hl1">Art Metropole / Temporary Acts</a>
         <img class="hide" src="/homepagehover/hover-artmet.jpg" />
-        <a href="" class="hl1 link-empty">YorkU DESN 2023 Promo Campaign</a>
+        <a href="" class="hl1">YorkU DESN 2023 Promo Campaign</a>
         <img class="hide vertical" src="/homepagehover/hover-desn.jpg" />
-        <a href="" class="hl1 link-empty">Oll</a>
-        <a href="" class="hl1 link-empty">Mechrevo</a>
+        <a href="" class="hl1">Oll</a>
+        <a href="" class="hl1">Mechrevo</a>
     </nav>
     <br>
     <span class="title">Personal Works</span>
     <nav>
-        <a href="" class="hl1 link-empty">Draft / Craft</a>
+        <a href="" class="hl1">Draft / Craft</a>
         <img class="hide" src="/homepagehover/hover-draft.gif" />
-        <a href="" class="hl1 link-empty">Bungled and Botched</a>
-        <a href="" class="hl1 link-empty">The Most Beautiful Toronto Books Festival</a>
-        <a href="" class="hl1 link-empty">Josef Rounded</a>
-        <a href="" class="hl1 link-empty">SHIFT Sans</a>
+        <a href="" class="hl1">Bungled and Botched</a>
+        <a href="" class="hl1">The Most Beautiful Toronto Books Festival</a>
+        <a href="" class="hl1">Josef Rounded</a>
+        <a href="" class="hl1">SHIFT Sans</a>
     </nav>
 </div>
 <script>
@@ -42,9 +42,11 @@
     //mouse off the item
     });
     
-    let tempObj = $("a[href='" + location.pathname + "']");
-    tempObj.addClass("current-page");
+    linkCurrent = $("a[href='" + location.pathname + "']");
+    linkCurrent.addClass("current-page");
 
     $('#jztvideo')[0].defaultPlaybackRate = 1.25;
     $('#jztvideo')[0].load();
+
+    $('a[href=""]').addClass("link-empty");;
 </script>

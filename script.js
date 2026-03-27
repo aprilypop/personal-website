@@ -5,6 +5,7 @@ let colWidth = (document.body.clientWidth-(16*7))/6;
 var r = document.querySelector(':root');
 let colourHL = $(".colour-hl");
 let siteColour = ['#FF4500','#FFC300','#51DA4C','#00E8FC','#1F41FF','#FF36AD'];
+let linkCurrent;
 
 r.style.setProperty('--column-width', colWidth+'px');
 
@@ -72,6 +73,8 @@ $(document).mousemove( function(e) {
 $('#navbarstuffs').load('/navbarstuffs.html');
 $('.award').load('/awards.html');
 $('.right-bar').load('/right-bar.html');
+$('.header-nav').load('/header-nav.html');
+
 $(document).ready(function(){
     //alert("a[href*='" + location.pathname + "']");
     let tempObj = $("a[href='" + location.pathname + "']");
@@ -87,6 +90,8 @@ $(document).ready(function(){
         //$('.text-fade').css("opacity","20%")
         //console.log($('.text-fade'));
     });
+
+    $('a[href=""]').addClass("link-empty");;
 
     var favLink = $("#favicon"),
         i = 0,
