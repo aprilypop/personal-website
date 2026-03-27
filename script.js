@@ -71,9 +71,20 @@ $(document).mousemove( function(e) {
 
 $('#navbarstuffs').load('/navbarstuffs.html');
 $('.award').load('/awards.html');
-$('.contact').load('/contact.html');
+$('.right-bar').load('/right-bar.html');
 $(document).ready(function(){
     //alert("a[href*='" + location.pathname + "']");
     let tempObj = $("a[href='" + location.pathname + "']");
     tempObj.addClass("current-page");
+    $(window).scroll(function() {
+        let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        if (scrollPosition === 0) {
+            console.log("You are at the very top of the page.");
+            $('.text-fade-toggle').removeClass('text-fade');
+        } else {
+            $('.text-fade-toggle').addClass('text-fade');
+        }
+        //$('.text-fade').css("opacity","20%")
+        //console.log($('.text-fade'));
+    });
 });
