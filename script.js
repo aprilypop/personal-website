@@ -87,4 +87,16 @@ $(document).ready(function(){
         //$('.text-fade').css("opacity","20%")
         //console.log($('.text-fade'));
     });
+
+    var favLink = $("#favicon"),
+        i = 0,
+        changeFaviconRepeat = setInterval(changeFavicon, 250);
+    
+    function changeFavicon () {
+        favLink.attr("href", "/favicons/ad-fav-"+i+".png")
+        i++;
+        if (i == 11) {
+            i=0;
+        }
+    }
 });
