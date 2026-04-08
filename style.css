@@ -31,7 +31,7 @@ body {
     width:100%;
 }
 .side-bar {
-    width: 360px;
+    width: 320px;
     height:100%;
     display:flex;
     flex-direction: column;
@@ -72,6 +72,7 @@ a {
     text-underline-offset: 12.5%; /* 1.5px */
     text-underline-position: from-font;
     opacity: 100%;
+    mix-blend-mode: difference;
 }
 
 .hl2:hover, .hl2:active {
@@ -175,14 +176,10 @@ nav>a~a {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding-top:12rem;
+    padding-top:16rem;
     padding-bottom:4rem;
 }
-#image-container>img{
-    width:80vw;
-    height: auto;
-}
-#image-container>video {
+#image-container>img, #image-container>video{
     width:80vw;
     height: auto;
 }

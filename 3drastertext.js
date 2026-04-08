@@ -1,4 +1,5 @@
 const nameCode = document.querySelector("#bg-feature");
+document.querySelector(':root').style.setProperty('--colour-hl', 'transparent');
 
 /*
 let tfw = Math.random()*-20-40;
@@ -75,7 +76,7 @@ function setup() {
   mySelect.option('orange', '#FFC300');
   mySelect.option('yellow', '#FFF200');
   mySelect.option('green', '#51DA4C');
-  mySelect.option('cyan', '#00E8FC');
+  mySelect.option('cyan', '#00d9ff');
   mySelect.option('blue', '#1F41FF');
   mySelect.option('magenta', '#FF36AD');
   mySelect.option('none');
@@ -118,6 +119,7 @@ function draw() {
 		clear();
 	} else {
 		background(c);
+        document.querySelector(':root').style.setProperty('--colour-hl', c);
 	}
   //clear();
   pg.textFont(font);

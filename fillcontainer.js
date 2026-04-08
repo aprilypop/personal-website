@@ -6,11 +6,11 @@ let inserted_html;
 let vClass = '';
 
 for(let i in imageDataArray){
-    if (['jpgvertical','pngvertical','webpvertical', 'mp4vertical','movvertical'].includes(imageDataArray[i])) {
+    if (['jpgvertical','pngvertical','webpvertical', 'mp4vertical','movvertical','gifvertical', 'jpegvertical'].includes(imageDataArray[i])) {
         vClass = 'class="vertical"'
         imageDataArray[i]=imageDataArray[i].slice(0,-8);
     } else {vClass='';}
-    if (['jpg','png','webp'].includes(imageDataArray[i])) {
+    if (['jpg','png','webp','gif', 'jpeg'].includes(imageDataArray[i])) {
         inserted_html = '<img loading="lazy" '+vClass+' src="'+parentName+'-'+i+'.'+imageDataArray[i]+'" />';
     } else if (['mp4','mov'].includes(imageDataArray[i])) {
         inserted_html = '<video '+vClass+' autoplay muted loop>'+'<source src="'+parentName+'-'+i+'.'+imageDataArray[i]+'" type="video/'+imageDataArray[i]+'"> Your browser does not support the video tag. </video>';
