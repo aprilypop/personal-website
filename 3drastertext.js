@@ -14,7 +14,15 @@ nameCode.style.fontSize="0px";
 let w = nameCode.clientWidth;
 let h = nameCode.clientHeight;
 //let name = nameCode.textContent || nameCode.innerText;
-let funkyText = 'under'+'\n'+'construction';
+let randInt;
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+let d = new Date().getDay();
+let Day = weekday[d];
+let funkyTextArray = ['real emo only'+'\n'+'consists of...',
+    'top of the'+'\n'+'morning to'+'\n'+'you laddies!',
+    'hey'+'\n'+'there!',
+    '(no longer)'+'\n'+'under'+'\n'+'construction!',
+    '']
 var nodes = nameCode.childNodes;
 var nameText = '';
 
@@ -48,16 +56,17 @@ function preload() {
 
 
 function setup() {
+    randInt = Math.floor(Math.random() * funkyTextArray.length);
     frameRate(15);
     let cnv = createCanvas(w,h);
     cnv.parent(nameCode);
     cnv.style("position", "relative");
     cnv.style("visibility", "visible");
 	pg = createGraphics(w/f,h/f,WEBGL);
-	quote = funkyText;
+	quote = funkyTextArray[randInt];
 	quote1=quote;
 	
-	txtInput = createElement('textarea',funkyText);
+	txtInput = createElement('textarea',funkyTextArray[randInt]);
     txtInput.position(25, 25);
     //nameCode.child(txtInput);
         
@@ -105,6 +114,11 @@ function setup() {
 }
 
 function draw() {
+    if (randInt==4){
+        var tempTime = new Date().toLocaleTimeString();
+        funkyTextArray[4]=Day+','+'\n'+tempTime;
+    }
+    quote = funkyTextArray[randInt];
   pg.textSize(160/f);
 	tRatio = pg.textWidth(quote)/pg.width/0.8213903743315508;
 	let c = mySelect.selected();
@@ -155,12 +169,12 @@ function draw() {
 		saveCanvas('shiftCanvas', 'png');
 	});
 
-    /*push();
+    push();
     rectMode(CENTER);
     textAlign(CENTER);
     textFont(font2);
-    text('Click Me', width/2, height-20);
-    pop();*/
+    text('Reload Me!', width/2, height-20);
+    pop();
 
 }
 

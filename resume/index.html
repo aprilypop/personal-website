@@ -11,9 +11,6 @@
     <script src="/script.js" defer></script>
 </head>
 <body>
-<div id="image-container" data-order="">
-    <script src="/fillcontainer.js"></script>
-</div>
 <div class="overlay">
     <div class="left-bar">
         <div class="side-bar">
@@ -34,6 +31,18 @@
     </div>
     <div class="right-bar">
     </div>
+</div>
+<div id="resume-container" data-order="">
+    <!--<script src="/fillcontainer.js"></script>-->
+    <img loading="lazy" id="resume" src="resume-0.png" style="pointer-events: auto;">
+    <script>
+        $('#resume').mouseover( function() {
+            $('#resume').attr("src", "resume-1.png")
+        })
+        $('#resume').mouseout( function() {
+            $('#resume').attr("src", "resume-0.png")
+        })
+    </script>
 </div>
 </body>
 </html>
