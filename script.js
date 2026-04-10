@@ -105,3 +105,15 @@ $(document).ready(function(){
         }
     }
 });
+/*
+$cont = $('#check-out');
+parts = $.map($cont.text().split(''), function(v){
+    return $('<span/>', {text:v});
+});
+$cont.empty().append(parts);
+
+$(document).ready(function() {
+	$('span').on('mouseover', function() {
+  	console.log($(this).text() + ': ' + JSON.stringify($(this).offset()))
+  })
+})*/
