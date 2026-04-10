@@ -74,8 +74,25 @@ $('#navbarstuffs').load('/navbarstuffs.html');
 $('.award').load('/awards.html');
 $('.right-bar').load('/right-bar.html');
 $('.header-nav').load('/header-nav.html');
+$('.mobile-overlay').load('/mobile-overlay.html');
+
+function getDeviceType() {
+  const userAgent = navigator.userAgent;
+if (/Mobi|Android/i.test(userAgent)) {
+    return "Mobile";
+  } else if (/Tablet|iPad/i.test(userAgent)) {
+    return "Tablet";
+  } else {
+    return "Desktop";
+  }
+}
 
 $(document).ready(function(){
+    const deviceType = getDeviceType();
+    console.log(deviceType);
+    if (deviceType!="Desktop") {
+        $('.mobile-overlay')[0].style.setProperty('display', 'block');
+    } else {$('.mobile-overlay')[0].style.setProperty('display', 'none');}
     //alert("a[href*='" + location.pathname + "']");
     let tempObj = $("a[href='" + location.pathname + "']");
     tempObj.addClass("current-page");

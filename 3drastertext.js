@@ -111,6 +111,13 @@ function setup() {
   txtInput.hide();
   
 	//pixelDensity(3);
+    const deviceType = getDeviceType();
+    console.log(deviceType);
+    if (deviceType!="Desktop") {
+        $('#bg-feature')[0].style.setProperty('height', '80%');
+        $('canvas')[0].style.setProperty('height', '80%');
+    }
+    windowResized();
 }
 
 function draw() {
@@ -180,9 +187,9 @@ function draw() {
 
 function windowResized() {
 	w = nameCode.clientWidth;
-  h = nameCode.clientHeight;
-  resizeCanvas(w, h*.875);
-  background(255);
+    h = nameCode.clientHeight;
+    resizeCanvas(w, h);
+    background(255);
 	pg.textSize(160/f);
 	tRatio = pg.textWidth(quote)/pg.width/0.8213903743315508;
 }

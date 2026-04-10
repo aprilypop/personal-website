@@ -237,44 +237,60 @@ nav>a~a {
     stroke-miterlimit: 1;
 }
 
-@media (min-width: 769px) {
-  .mobile-overlay {
-    display:none;
+.mobile-overlay {
+    display:block;
+    font-family: 'Transit Grotesk', Arial, sans-serif;
+    font-size: 5vw;
+    line-height: 6vw;
+    background-color:black;
+    color:#f5f5f5;
+    font-stretch: expanded;
+}
+.mobile-overlay p{
+    margin-top:4vw;
+    -webkit-transform:scale(1,1.1); /* Safari and Chrome */
+    -moz-transform:scale(1,1.1); /* Firefox */
+    -ms-transform:scale(1,1.1); /* IE 9 */
+    -o-transform:scale(1,1.1); /* Opera */
+    transform:scale(1,1.1);
+}
+.mobile-overlay .hl2 {
+    color:#f5f5f5;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 10%; /* 1.44px */
+    text-underline-offset: 5%; /* 1.5px */
+    text-underline-position: from-font;
+    opacity: 100%;
+}
+.mobile-overlay-child {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    display:flex;
+    position:fixed;
+    flex-direction: column;
+
+    position:absolute;
+    overflow:scroll;
+    min-height:100%;
+    height:fit-content;
+    min-height:100%;
+    height:fit-content;
+    overflow: scroll;
+    padding:6vw;
+    gap:6vw;
+    width:100%;
+    z-index: 99;
+
+}
+
+.seized {
+  animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
 }
-@media (max-width: 768px) {
-    .mobile-overlay {
-        display:block;
-        font-family: 'Transit Grotesk', Arial, sans-serif;
-        font-size: 1.5rem;
-        line-height: 1.8rem;
-        background-color:black;
-        color:#f5f5f5;
-    }
-    .mobile-overlay p{
-        margin:0;
-    }
-    .mobile-overlay .hl2 {
-        color:#f5f5f5;
-    }
-    .mobile-overlay-child {
-        background-color: rgba(0, 0, 0, 0.9);
-        box-sizing: border-box;
-        display:flex;
-        position:fixed;
-        flex-direction: column;
-
-        position:absolute;
-        overflow:scroll;
-        min-height:100%;
-        height:fit-content;
-        min-height:100%;
-        height:fit-content;
-        overflow: scroll;
-        padding:2rem;
-        gap:2rem;
-        width:100%;
-        z-index: 99;
-    }
-}
-
